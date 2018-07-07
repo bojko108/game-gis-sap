@@ -16,7 +16,7 @@ public class SetupLocalPlayer : NetworkBehaviour
 
     private void Start()
     {
-        PlayerSettings.IsLocalPlayer = this.isLocalPlayer;
+        LocalPlayerSettings.IsLocalPlayer = this.isLocalPlayer;
 
         if (this.isLocalPlayer)
         {
@@ -46,15 +46,15 @@ public class SetupLocalPlayer : NetworkBehaviour
             }
         }
 
-        this.SetupPlayer(PlayerSettings.Name, PlayerSettings.Type);
+        this.SetupPlayer(LocalPlayerSettings.Name, LocalPlayerSettings.Type);
     }
 
     private void SetupPlayer(string name, enumPlayerType playerType)
     {
         Color color = Color.white;
 
-        this.gameObject.tag = PlayerSettings.Tag;
-        this.gameObject.SetLayerRecursively(PlayerSettings.Layer);
+        this.gameObject.tag = LocalPlayerSettings.Tag;
+        this.gameObject.SetLayerRecursively(LocalPlayerSettings.Layer);
 
         switch (playerType)
         {

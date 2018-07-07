@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class PlayerSettings
+public static class LocalPlayerSettings
 {
     public static string Name;
     public static bool IsLocalPlayer;
@@ -48,8 +48,8 @@ public class GameManagerScript : MonoBehaviour
 
 
         // set these two from MenuScene
-        PlayerSettings.Name = "WTF";
-        PlayerSettings.Type = enumPlayerType.GisPlayer;
+        LocalPlayerSettings.Name = "WTF";
+        LocalPlayerSettings.Type = enumPlayerType.GisPlayer;
     }
 
     private void Update()
