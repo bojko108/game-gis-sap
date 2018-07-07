@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 114759659156047064}
   - component: {fileID: 114055262909309006}
   - component: {fileID: 114526082015105442}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TankPrefab
   m_TagString: GisPlayer
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4150308914954620}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 224563489073669772}
   - component: {fileID: 222370614182593912}
   - component: {fileID: 114374519623375436}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: ReloadText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 4595759178814468}
   - component: {fileID: 33601819573736602}
   - component: {fileID: 23130744404182292}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TankTracksRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224881965888765118}
   - component: {fileID: 114950938974460818}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 224971330058296598}
   - component: {fileID: 222729822164007770}
   - component: {fileID: 114936181681196772}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 4168786941949334}
   - component: {fileID: 33792392024755672}
   - component: {fileID: 23310105326724984}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TankChassis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4050418136916514}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TankBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 224707414047911428}
   - component: {fileID: 222103533081003354}
   - component: {fileID: 114666257178885006}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: HealthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224986343781489658}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224802039122982178}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 223796703110712264}
   - component: {fileID: 114597441075099246}
   - component: {fileID: 114277819483123914}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 224103263835148314}
   - component: {fileID: 222089819347224698}
   - component: {fileID: 114473250868914318}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 4653163248022514}
   - component: {fileID: 33556224659546704}
   - component: {fileID: 23537181248115908}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TankTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 224473299543396130}
   - component: {fileID: 222714528359894288}
   - component: {fileID: 114632790280619782}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224913568133939720}
   - component: {fileID: 114947489324167854}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Reload
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 4247041144489208}
   - component: {fileID: 33650869359928882}
   - component: {fileID: 23965702508767706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TankTracksLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 224703084256550572}
   - component: {fileID: 222432788501683258}
   - component: {fileID: 114950261717815956}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1081643311262556}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224858213760976258}
@@ -354,7 +354,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1122472122091184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 2}
+  m_LocalPosition: {x: 0, y: 0.359, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4653163248022514}
@@ -977,7 +977,6 @@ MonoBehaviour:
   MovementSpeed: 10
   RotationSpeed: 100
   TurretRotationSpeed: 100
-  StopMovement: 0
 --- !u!114 &114936181681196772
 MonoBehaviour:
   m_ObjectHideFlags: 1

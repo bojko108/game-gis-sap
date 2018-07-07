@@ -14,14 +14,12 @@ public class TankControlScript : MonoBehaviour
     private Rigidbody rigBody;
     // used when SPACE is hit - the tank is upsidedown
     private bool stopMovement = false;
-    private Quaternion initialRotation;
 
     //private float bearing = 0f;
 
     private void Start()
     {
         this.rigBody = GetComponent<Rigidbody>();
-        this.initialRotation = this.transform.rotation;
     }
 
     private void Update()
@@ -33,10 +31,10 @@ public class TankControlScript : MonoBehaviour
 
         this.RotateTurret();
 
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    StartCoroutine(this.TryToGetUp());
-        //}
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(this.TryToGetUp());
+        }
     }
 
     private void MoveTank()
@@ -87,16 +85,20 @@ public class TankControlScript : MonoBehaviour
         }
     }
 
-    //private IEnumerator TryToGetUp()
-    //{
-    //    this.stopMovement = true;
+    private IEnumerator TryToGetUp()
+    {
+        this.stopMovement = true;
 
-    //    this.rigBody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+        this.rigBody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
 
-    //    this.rigBody.MoveRotation(this.initialRotation);
+        Quaternion rotation = Quaternion.Euler(0f, this.transform.rotation.eulerAngles.y, 0f);
 
-    //    yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
 
-    //    this.stopMovement = false;
-    //}
+        this.rigBody.MoveRotation(rotation);
+
+        yield return new WaitForSeconds(0.5f);
+
+        this.stopMovement = false;
+    }
 }

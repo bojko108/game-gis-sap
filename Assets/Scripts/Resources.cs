@@ -23,7 +23,7 @@ public static class Resources
     
     public static class Layers
     {
-        public const string Buildings = "Buildings";
+        public const string Environment = "Environment";
         public const string GisPlayers = "GisPlayers";
         public const string SapPlayers = "SapPlayers";
         public const string Minimap = "Minimap";

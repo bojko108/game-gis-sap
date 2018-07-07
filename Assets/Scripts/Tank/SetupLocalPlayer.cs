@@ -16,6 +16,8 @@ public class SetupLocalPlayer : NetworkBehaviour
 
     private void Start()
     {
+        PlayerSettings.IsLocalPlayer = this.isLocalPlayer;
+
         if (this.isLocalPlayer)
         {
             GameObject camera = Camera.main.gameObject;
@@ -51,14 +53,17 @@ public class SetupLocalPlayer : NetworkBehaviour
     {
         Color color = Color.white;
 
+        this.gameObject.tag = PlayerSettings.Tag;
+        this.gameObject.SetLayerRecursively(PlayerSettings.Layer);
+
         switch (playerType)
         {
             case enumPlayerType.GisPlayer:
-                this.tag = Resources.Tags.GisPlayer;
+                //this.tag = Resources.Tags.GisPlayer;
                 color = Color.green;
                 break;
             case enumPlayerType.SapPlayer:
-                this.tag = Resources.Tags.SapPlayer;
+                //this.tag = Resources.Tags.SapPlayer;
                 color = Color.red;
                 break;
         }

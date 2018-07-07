@@ -4,22 +4,46 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    public AudioClip ExplosionSound;
+
+    public float ExplosionForce = 1000f;
+    public float ExplosionRadius = 5f;
+
+
+    private AudioSource audioSource;
+
     private int enemiesLayer;
     private Rigidbody bulletBody;
 
     public void Awake()
     {
         this.bulletBody = this.GetComponent<Rigidbody>();
+
+        this.enemiesLayer = LayerMask.GetMask(Resources.Layers.GisPlayers, Resources.Layers.SapPlayers);
+
+        // get audio source
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        GameObject hit = collision.gameObject;
+        // play explosion...
 
-        if (hit != null && hit.CompareTag("GisPlayer") == false)
+        Collider[] colliders = Physics.OverlapSphere(this.transform.position, this.ExplosionRadius, this.enemiesLayer);
+
+        for (int i = 0; i < colliders.Length; i++)
         {
-            this.gameObject.SetActive(false);
+            Rigidbody targetRigidbody = colliders[i].GetComponent<Rigidbody>();
+
+            if (targetRigidbody != null)
+            {
+                targetRigidbody.AddExplosionForce(this.ExplosionForce, this.transform.position, this.ExplosionRadius);
+
+                // calculate damage
+                // apply damage
+            }
         }
+
+        this.gameObject.SetActive(false);
     }
 
     private void OnDisable()
