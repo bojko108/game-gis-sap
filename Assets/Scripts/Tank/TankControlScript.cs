@@ -7,13 +7,16 @@ public class TankControlScript : MonoBehaviour
     public Transform Turret;
 
     public float MovementSpeed = 10f;
+    public float MaxSpeed = 20f;
     public float RotationSpeed = 10f;
     public float TurretRotationSpeed = 10f;
+    public float JumpForce = 10f;
+    [HideInInspector]
+    public bool DisableGun = false; // while moving at max speed fire with the gun is disabled
     //public float MaxAttackAngle = 30f;
 
     private Rigidbody rigBody;
-    // used when SPACE is hit - the tank is upsidedown
-    private bool stopMovement = false;
+    private bool stopMovement = false;// used when SPACE is hit - the tank is upsidedown
 
     //private float bearing = 0f;
 
@@ -24,6 +27,8 @@ public class TankControlScript : MonoBehaviour
 
     private void Update()
     {
+        this.DisableGun = Input.GetKey(KeyCode.LeftShift);
+
         if (this.stopMovement)
             return;
 
@@ -39,7 +44,9 @@ public class TankControlScript : MonoBehaviour
 
     private void MoveTank()
     {
-        float movement = Input.GetAxis("Vertical") * Time.deltaTime * this.MovementSpeed;
+        float speed = Input.GetKey(KeyCode.LeftShift) ? this.MaxSpeed : this.MovementSpeed;
+
+        float movement = Input.GetAxis("Vertical") * Time.deltaTime * speed;
         float rotation = Input.GetAxis("Horizontal") * Time.deltaTime * this.RotationSpeed;
 
         this.rigBody.MovePosition(this.rigBody.position + this.transform.forward * movement);
@@ -89,7 +96,7 @@ public class TankControlScript : MonoBehaviour
     {
         this.stopMovement = true;
 
-        this.rigBody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+        this.rigBody.AddForce(new Vector3(0, this.JumpForce, 0), ForceMode.Impulse);
 
         Quaternion rotation = Quaternion.Euler(0f, this.transform.rotation.eulerAngles.y, 0f);
 

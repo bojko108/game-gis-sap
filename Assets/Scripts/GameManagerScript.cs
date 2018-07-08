@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,7 +29,7 @@ public static class LocalPlayerSettings
             switch (Type)
             {
                 case enumPlayerType.GisPlayer:
-                    return LayerMask.NameToLayer( Resources.Layers.GisPlayers);
+                    return LayerMask.NameToLayer(Resources.Layers.GisPlayers);
                 default:
                     return LayerMask.NameToLayer(Resources.Layers.SapPlayers);
             }
@@ -66,5 +67,25 @@ public class GameManagerScript : MonoBehaviour
         }
 
         #endregion
+
+        #region UPDATE STATS
+
+        if (Time.frameCount % 30 == 0)
+        {
+            this.UpdateStats(Resources.Tags.GisPlayer);
+            this.UpdateStats(Resources.Tags.SapPlayer);
+        }
+
+        #endregion
+    }
+
+    private void UpdateStats(string playersTag)
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag(playersTag);
+
+        for (int i = 0; i < players.Length; i++)
+        {
+
+        }
     }
 }

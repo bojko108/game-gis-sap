@@ -23,6 +23,7 @@ public class TankShooting : MonoBehaviour
     public Transform GunTransform;
     
     private AudioSource gunSoundSource;
+    private TankControlScript tankControl;
 
     private bool canShoot = false;
     private float timer;
@@ -30,6 +31,7 @@ public class TankShooting : MonoBehaviour
     private void Awake()
     {
         this.gunSoundSource = this.gameObject.GetComponent<AudioSource>();
+        this.tankControl = this.GetComponent<TankControlScript>();
 
         this.ReloadSlider.maxValue = this.FireRate;
         this.ReloadSlider.minValue = 0;
@@ -39,6 +41,8 @@ public class TankShooting : MonoBehaviour
 
     private void Update()
     {
+        if (this.tankControl.DisableGun) return;
+
         if (Input.GetButtonDown("Fire1"))
         {
             if (this.canShoot)
