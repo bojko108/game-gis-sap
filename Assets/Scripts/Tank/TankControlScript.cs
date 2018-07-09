@@ -9,6 +9,7 @@ public class TankControlScript : MonoBehaviour
     public float MovementSpeed = 10f;
     public float MaxSpeed = 20f;
     public float RotationSpeed = 10f;
+    public bool TurretRotate = true;
     public float TurretRotationSpeed = 10f;
     public float JumpForce = 10f;
     [HideInInspector]
@@ -34,12 +35,11 @@ public class TankControlScript : MonoBehaviour
 
         this.MoveTank();
 
-        this.RotateTurret();
+        if (this.TurretRotate)
+            this.RotateTurret();
 
         if (Input.GetKeyDown(KeyCode.Space))
-        {
             StartCoroutine(this.TryToGetUp());
-        }
     }
 
     private void MoveTank()

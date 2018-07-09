@@ -20,10 +20,12 @@ public class SetupLocalPlayer : NetworkBehaviour
 
         if (this.isLocalPlayer)
         {
-            GameObject camera = Camera.main.gameObject;
-            camera.transform.position = new Vector3(0f, 3f, -6f);
-            camera.transform.rotation = Quaternion.Euler(5f, 0f, 0f);
-            camera.transform.parent = this.transform;
+            //GameObject camera = Camera.main.gameObject;
+            //camera.transform.position = new Vector3(0f, 3f, -6f);
+            //camera.transform.rotation = Quaternion.Euler(5f, 0f, 0f);
+            //camera.transform.parent = this.transform;
+
+            CameraFollowScript.Target = this.transform;
 
             this.GetComponent<TankControlScript>().enabled = true;
             this.GetComponent<TankShooting>().enabled = true;
@@ -64,7 +66,7 @@ public class SetupLocalPlayer : NetworkBehaviour
                 break;
             case enumPlayerType.SapPlayer:
                 //this.tag = Resources.Tags.SapPlayer;
-                color = Color.red;
+                color = Color.blue;
                 break;
         }
 

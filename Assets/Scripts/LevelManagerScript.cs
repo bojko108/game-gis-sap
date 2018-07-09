@@ -37,7 +37,7 @@ public static class LocalPlayerSettings
     }
 }
 
-public class GameManagerScript : MonoBehaviour
+public class LevelManagerScript : MonoBehaviour
 {
     public GameObject PlayersStats;
 

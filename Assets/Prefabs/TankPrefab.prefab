@@ -835,7 +835,7 @@ MonoBehaviour:
   m_MovementTheshold: 0.001
   m_VelocityThreshold: 0.0001
   m_SnapThreshold: 5
-  m_InterpolateRotation: 1
+  m_InterpolateRotation: 15
   m_InterpolateMovement: 1
 --- !u!114 &114597441075099246
 MonoBehaviour:
@@ -977,6 +977,7 @@ MonoBehaviour:
   MovementSpeed: 10
   MaxSpeed: 20
   RotationSpeed: 100
+  TurretRotate: 0
   TurretRotationSpeed: 100
   JumpForce: 150
   DisableGun: 0
