@@ -788,7 +788,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reload
+  m_Text: Ready to fire
 --- !u!114 &114473250868914318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -903,6 +903,7 @@ MonoBehaviour:
   MisfireSound: {fileID: 0}
   ReadyToFireSound: {fileID: 0}
   ReloadSlider: {fileID: 114947489324167854}
+  ReloadText: {fileID: 114374519623375436}
   GunTransform: {fileID: 4150308914954620}
 --- !u!114 &114666257178885006
 MonoBehaviour:
@@ -1239,7 +1240,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 4.5, y: 27}
-  m_SizeDelta: {x: 50.3, y: 30}
+  m_SizeDelta: {x: 70, y: 30}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!224 &224703084256550572
 RectTransform:

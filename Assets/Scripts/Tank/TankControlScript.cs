@@ -94,7 +94,7 @@ public class TankControlScript : MonoBehaviour
 
     private IEnumerator TryToGetUp()
     {
-        this.stopMovement = true;
+       this.stopMovement = true;
 
         this.rigBody.AddForce(new Vector3(0, this.JumpForce, 0), ForceMode.Impulse);
 

@@ -46,11 +46,6 @@ public class LevelManagerScript : MonoBehaviour
         //Cursor.lockState = CursorLockMode.Confined;
 
         this.PlayersStats.SetActive(false);
-
-
-        // set these two from MenuScene
-        LocalPlayerSettings.Name = "WTF";
-        LocalPlayerSettings.Type = enumPlayerType.GisPlayer;
     }
 
     private void Update()

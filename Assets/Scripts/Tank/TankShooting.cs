@@ -17,8 +17,10 @@ public class TankShooting : MonoBehaviour
     public AudioClip MisfireSound;
     [Tooltip("Played when the gun is realoded and ready to fire")]
     public AudioClip ReadyToFireSound;
-    [Tooltip("Used to visualising gun reloading progress")]
+    [Tooltip("Used for visualising gun reloading progress")]
     public Slider ReloadSlider;
+    [Tooltip("Used for visualising gun reloading progress")]
+    public Text ReloadText;
     [Tooltip("Bullets initial position - place this infront of the gun")]
     public Transform GunTransform;
     
@@ -83,7 +85,10 @@ public class TankShooting : MonoBehaviour
     private IEnumerator Reload()
     {
         this.timer = 0f;
-       
+
+        string text = this.ReloadText.text;
+        this.ReloadText.text = "Reloading";
+
         while (this.canShoot == false)
         {
             this.timer += Time.deltaTime;
@@ -93,6 +98,8 @@ public class TankShooting : MonoBehaviour
             if (this.timer >= this.FireRate)
             {
                 this.canShoot = true;
+
+                this.ReloadText.text = text;
 
                 if (this.ReadyToFireSound)
                 {
